@@ -1,20 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import UseCanvas from "./UseCanvas";
 
 const Canvas = (props) => {
-  const ref = useRef();
+  const { draw, ...rest } = props;
+  const canvasRef = UseCanvas(draw);
 
-  const draw = (context) => {
-    context.fillStyle = "grey";
-    context.fillRect(10, 10, 100, 100);
-  };
-
-  useEffect(() => {
-    const canvas = ref.current;
-    const context = canvas.getContext("2d");
-    draw(context);
-  }, []);
-
-  return <canvas ref={ref} {...props} />;
+  return <canvas ref={canvasRef} {...rest} />;
 };
-
 export default Canvas;

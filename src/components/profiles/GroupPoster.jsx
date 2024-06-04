@@ -52,10 +52,11 @@ function GroupPoster() {
         }}
       >
         <div className=" m-3 rounded-md p-3 grid grid-cols-1 md:grid-cols-3 gap-5 place-content-center">
-          {members.map((n) => {
-            const { profile, name, descriptions } = n;
+          {members.map((member, index) => {
+            const { profile, name, descriptions } = member;
             return (
               <Poster
+                key={index}
                 profile={profile}
                 name={name}
                 descriptions={descriptions}

@@ -1,35 +1,25 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { ShareText } from "./ShareText";
 import Canvas from "./canvas/Canvas";
 
 function DisplayCanvas() {
-  const { text, setText } = useContext(ShareText);
+  const draw = (ctx, frameCount) => {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    // ctx.fillStyle = "#000000";
+    // ctx.beginPath();
+    // ctx.arc(50, 100, 20 * Math.sin(frameCount * 0.05) ** 2, 0, 2 * Math.PI);
+    // ctx.fill();
 
-  function handleChange(e) {
-    setText(e.target.value);
-    console.log(e.target.value);
-  }
+    // ctx.fillStyle = "red";
+    // ctx.font = "bold 50px sans-serif";
+    // ctx.fillText("hi ther", 50 + frameCount, 100);
+
+    ctx.fillStyle = "yellow";
+    const delta = frameCount % 800;
+    ctx.fillRect(10, 10, 100, 100);
+  };
   return (
-    <div className="flex flex-col gap-3">
-      <Canvas className="bg-white h-20" />
-      <h2 className="p-3 bg-white rounded-md">{text}</h2>
-      <div className="flex flex-col">
-        <div className="flex flex-row gap-2">
-          <input
-            className="grow p-3 rounded-md border-none"
-            onChange={handleChange}
-            value={text}
-            type="text"
-            placeholder={text}
-          />
-          <button
-            className="bg-[#71A8FB] rounded-md hover:text-white p-3 flex justify-center items-center"
-            onClick={() => setText("")}
-          >
-            Clear
-          </button>
-        </div>
-      </div>
+    <div>
+      <Canvas draw={draw} className="bg-black w-full" />
     </div>
   );
 }
