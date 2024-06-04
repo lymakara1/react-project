@@ -1,16 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { ShareText } from "./ShareText";
 import Canvas from "./canvas/Canvas";
 
 function DisplayCanvas() {
   const { text, setText } = useContext(ShareText);
+
   function handleChange(e) {
     setText(e.target.value);
     console.log(e.target.value);
   }
   return (
     <div className="flex flex-col gap-3">
-      <Canvas className="bg-emerald-500 h-20" />
+      <Canvas className="bg-white h-20" />
       <h2 className="p-3 bg-white rounded-md">{text}</h2>
       <div className="flex flex-col">
         <div className="flex flex-row gap-2">

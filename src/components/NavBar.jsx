@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import gicLogo from "../assets/gicLogo.png";
 import { NavLink } from "react-router-dom";
+import { ShareText } from "./ShareText";
 
 function NavBar() {
+  const { fullscreen, setFullScreen } = useContext(ShareText);
+
+  const handleFullScreen = () => {
+    setFullScreen(true);
+    console.log("handle Full Screen" + fullscreen);
+  };
+
   return (
     <nav className="m-3 bg-[#71A8FB] rounded-md flex flex-row gap-3 p-3 justify-center items-center">
       <img className="h-12 rounded-sm" src={gicLogo} alt="" />
@@ -18,7 +26,7 @@ function NavBar() {
         </NavLink>
       </div>
       <div>
-        <button className="bg-white p-2 rounded-md">
+        <button onClick={handleFullScreen} className="bg-white p-2 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

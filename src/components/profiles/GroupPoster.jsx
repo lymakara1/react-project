@@ -1,11 +1,11 @@
 import React from "react";
 import Poster from "./Poster";
 import deepmind from "../../assets/deepmind.jpg";
-import makaraImg from "../../assets/avatar.png";
-import orngImg from "../../assets/avatar.png";
-import kimtryImg from "../../assets/avatar.png";
-import sombathImg from "../../assets/avatar.png";
-import vichetImg from "../../assets/avatar.png";
+import makaraImg from "../../assets/makara.jpg";
+import orngImg from "../../assets/orng.jpg";
+import kimtryImg from "../../assets/kimtry.jpg";
+import sombathImg from "../../assets/sombath.jpg";
+import vichetImg from "../../assets/vichet.jpg";
 
 function GroupPoster() {
   const members = [
