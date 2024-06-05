@@ -5,7 +5,7 @@ import InputField from "../components/InputField";
 
 function HomeLayout() {
   return (
-    <div className="b bg-slate-400 m-3 p-3 rounded-md">
+    <div className="bg-slate-400 m-3 p-3 rounded-md flex flex-col gap-5">
       <DisplayCanvas />
       <InputField />
       <Customization />

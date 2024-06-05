@@ -14,7 +14,7 @@ function NavBar() {
   return (
     <nav className="m-3 bg-[#71A8FB] rounded-md flex flex-row gap-3 p-3 justify-center items-center">
       <img className="h-12 rounded-sm" src={gicLogo} alt="" />
-      <div className="flex flex-row gap-3 flex-grow justify-center items-center">
+      <div className="flex flex-row gap-3 flex-grow justify-center items-center max-md:hidden max-md:flex-grow">
         <NavLink className="hover:text-white" to="/">
           HOME
         </NavLink>

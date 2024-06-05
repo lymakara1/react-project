@@ -29,8 +29,9 @@ const router = createBrowserRouter([
 function App() {
   let defaultText = "Welcome to Textboard 123";
   const [text, setText] = useState(defaultText);
+  const [fullscreen, setFullScreen] = useState(false);
   return (
-    <ShareText.Provider value={{ text, setText }}>
+    <ShareText.Provider value={{ text, setText, fullscreen, setFullScreen }}>
       <RouterProvider router={router} />
     </ShareText.Provider>
   );

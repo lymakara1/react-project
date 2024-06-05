@@ -10,7 +10,6 @@ function InputField() {
   }
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="p-3 bg-white rounded-md">{text}</h2>
       <div className="flex flex-col">
         <div className="flex flex-row gap-2">
           <input
