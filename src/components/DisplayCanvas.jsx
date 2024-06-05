@@ -4,7 +4,7 @@ import { ShareText } from "./ShareText";
 
 // Draw Backgrund
 const drawBackground = (ctx, width, height) => {
-  ctx.fillStyle = "blue";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, width, height);
 };
 
@@ -21,21 +21,45 @@ const drawCircle = function (ctx) {
   ctx.fill();
 };
 
-// Draw Text Input
 const drawText = (ctx, frameCount, text, width, height) => {
-  var x = 100;
-  var y = 100;
-  var dx = 1;
+  var textMetrics = ctx.measureText(text);
+  var textWidth = ctx.measureText(text).width;
+  var textHeight =
+    textMetrics.actualBoundingBoxAscent + textMetrics.actualBoundingBoxDescent;
+  var x = (width - textWidth) / 2;
+  var y = (height - textHeight) / 2 + textMetrics.actualBoundingBoxAscent;
 
   ctx.fillStyle = "red";
   ctx.font = "bold 100px sans-serif";
-  ctx.fillText(text, frameCount, height / 2);
 
-  // Scroll Right
-  if (x > width) {
-    x = -textWidth;
+  let speed = 2;
+  let direction = 1; // 1 for right, -1 for left
+  let isPaused = true;
+  let blink = true; // Set to true to enable blinking
+  let blinkSpeed = 50; // Blink speed in milliseconds
+
+  if (isPaused) {
+    // Center the text when paused
+    x = (width - textWidth) / 2;
+  } else {
+    let dx = (frameCount * speed) % (width + textWidth);
+    x = direction === 1 ? dx - textWidth : width - dx;
+
+    // Adjust the position to loop correctly
+    if (direction === 1 && x > width) {
+      frameCount = 0;
+    } else if (direction === -1 && x + textWidth < 0) {
+      frameCount = 0;
+    }
   }
-  x += dx;
+
+  const currentTime = Date.now();
+  const elapsedTime = currentTime - frameCount;
+  const blinkState = blink && elapsedTime % (2 * blinkSpeed) < blinkSpeed;
+
+  if (blinkState) {
+    ctx.fillText(text, x, y);
+  }
 };
 
 function DisplayCanvas() {

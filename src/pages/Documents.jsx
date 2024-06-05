@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import FireworkCanvas from "../animations/FireworkCanvas";
 
 function Documents() {
   return (
@@ -10,6 +11,7 @@ function Documents() {
         <div>hello</div>
         <div>hello</div>
         <div>hello</div>
+        <FireworkCanvas />
       </div>
     </div>
   );
