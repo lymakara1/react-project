@@ -1,0 +1,21 @@
+.laser-writer-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.laser-writer {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  animation: laser-writer 4s infinite;
+}
+
+@keyframes laser-writer {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00;
+  }
+  50% {
+    text-shadow: 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+  }
+}

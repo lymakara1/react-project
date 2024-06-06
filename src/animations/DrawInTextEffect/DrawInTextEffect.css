@@ -1,0 +1,21 @@
+.draw-in-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.draw-in-text {
+  font-family: "Decovar", sans-serif;
+  font-size: 48px;
+  color: #000;
+  animation: draw-in 3s infinite;
+}
+
+@keyframes draw-in {
+  0%,
+  100% {
+    stroke-dasharray: 0;
+  }
+  50% {
+    stroke-dasharray: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+.abstract-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.abstract-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  position: relative;
+  animation: abstract-animation 3s infinite;
+}
+
+@keyframes abstract-animation {
+  0% {
+    transform: skewX(0deg);
+    color: #000;
+  }
+  50% {
+    transform: skewX(25deg);
+    color: #f00;
+  }
+  100% {
+    transform: skewX(0deg);
+    color: #000;
+  }
+}

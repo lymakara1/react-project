@@ -1,0 +1,21 @@
+.blinking-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.blinking-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

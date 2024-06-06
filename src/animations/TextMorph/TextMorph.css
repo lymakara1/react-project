@@ -1,0 +1,23 @@
+.text-morph-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-morph {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #333;
+  animation: text-morph 3s infinite;
+}
+
+@keyframes text-morph {
+  0% {
+    color: #333;
+  }
+  50% {
+    color: #f00;
+  }
+  100% {
+    color: #333;
+  }
+}

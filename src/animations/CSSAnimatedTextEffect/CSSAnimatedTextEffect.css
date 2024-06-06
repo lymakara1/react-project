@@ -1,0 +1,21 @@
+.css-animated-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.css-animated-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  animation: css-animated 3s infinite;
+}
+
+@keyframes css-animated {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  50% {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+}

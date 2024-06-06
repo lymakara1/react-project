@@ -1,0 +1,21 @@
+.gradient-gooey-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.gradient-gooey-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  animation: gooey 3s infinite;
+}
+
+@keyframes gooey {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  50% {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+}

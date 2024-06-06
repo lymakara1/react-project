@@ -50,7 +50,7 @@ const drawText = (
 
   const currentTime = Date.now();
   const blinkState =
-    !blink || currentTime % (2 * blinkFrequency) < blinkFrequency;
+    !blink || currentTime % (2000 / blinkFrequency) < 1000 / blinkFrequency;
 
   if (blinkState) {
     ctx.fillText(text, x, y);

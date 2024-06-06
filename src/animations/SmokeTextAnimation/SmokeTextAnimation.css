@@ -1,0 +1,21 @@
+.smoke-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.smoke-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  animation: smoke 4s infinite;
+}
+
+@keyframes smoke {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+  50% {
+    text-shadow: 0 0 20px #aaa, 0 0 30px #aaa, 0 0 40px #aaa;
+  }
+}

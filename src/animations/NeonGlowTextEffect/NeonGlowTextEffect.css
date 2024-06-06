@@ -1,0 +1,20 @@
+.neon-glow-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.neon-glow-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff,
+    0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  to {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff,
+      0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+  }
+}

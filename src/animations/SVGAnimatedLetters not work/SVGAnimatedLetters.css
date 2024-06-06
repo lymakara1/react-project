@@ -1,0 +1,25 @@
+.svg-animated-letters-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+text {
+  font-size: 100px;
+  font-family: "Roboto", sans-serif;
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 5, 10;
+}
+
+.text-copy {
+  stroke: white;
+  stroke-dashoffset: 1000;
+  animation: stroke-offset 5s infinite linear;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

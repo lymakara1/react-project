@@ -1,0 +1,23 @@
+.superman-main-titles-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.superman-main-titles {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #00f;
+  animation: superman 3s infinite;
+}
+
+@keyframes superman {
+  0% {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  50% {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+  100% {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+}

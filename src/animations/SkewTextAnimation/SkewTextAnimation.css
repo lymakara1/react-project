@@ -1,0 +1,21 @@
+.skew-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.skew-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  display: inline-block;
+  animation: skew 2s infinite alternate;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(20deg);
+  }
+}

@@ -81,7 +81,7 @@ function FontSetting({
             <div className="right flex justify-center items-center gap-2">
               <button
                 className="righ btn left btn-light"
-                onClick={() => setFontSize((size) => size - 1)}
+                onClick={() => setFontSize((size) => size - 5)}
               >
                 <svg
                   className="w-5"
@@ -94,7 +94,7 @@ function FontSetting({
               </button>
               <button
                 className="righ btn left btn-light"
-                onClick={() => setFontSize((size) => size + 1)}
+                onClick={() => setFontSize((size) => size + 5)}
               >
                 <svg
                   className="w-5"

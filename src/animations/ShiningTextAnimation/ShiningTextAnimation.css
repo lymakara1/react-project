@@ -1,0 +1,30 @@
+.shining-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.shining-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  background: linear-gradient(
+    to right,
+    #f00 20%,
+    #ff0 40%,
+    #0f0 60%,
+    #0ff 80%,
+    #00f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shining 3s linear infinite;
+}
+
+@keyframes shining {
+  from {
+    background-position: -500%;
+  }
+  to {
+    background-position: 500%;
+  }
+}

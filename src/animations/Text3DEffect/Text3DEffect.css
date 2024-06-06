@@ -1,0 +1,14 @@
+.text-3d-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-3d {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #bbb, 3px 3px 0 #aaa, 4px 4px 0 #999,
+    5px 5px 0 #888, 6px 6px 0 #777, 7px 7px 0 #666, 8px 8px 0 #555,
+    9px 9px 0 #444, 10px 10px 0 #333, 11px 11px 0 #222, 12px 12px 0 #111,
+    13px 13px 0 #000;
+}

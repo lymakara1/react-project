@@ -56,38 +56,42 @@ function Documents() {
   };
 
   return (
-    <div className="text-slate-800 flex flex-col justify-center items-center">
-      <p class="text-3xl font-semibold text-gray-500">What is Text Board?</p>
-      <p className="text-black">
-        Text Board is an online tool that allows you to input text and customize
-        its animation, direction, font, and any other features.
-      </p>
-      <div className="questionAnswer w-[800px]">
-        {questions.map((question, index) => (
-          <div key={index}>
-            <div
-              className="question flex justify-between flex-row items-center w-[800px] h-[50px] rounded-md pl-[15px] pr-[30px] mt-[10px] bg-blue-200 cursor-pointer"
-              onClick={() => toggleAnswer(index)}
-            >
-              <span>{`${index + 1}. ${question}`}</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                className={`w-6 h-6 ${expandedIndex === index && "rotate-180"}`}
+    <div className="bg-slate-100 m-3 p-3 rounded-md">
+      <div className="text-slate-800 flex flex-col justify-center items-center w-full ">
+        <p class="text-3xl font-semibold text-gray-500">What is Text Board?</p>
+        <p className="text-black">
+          Text Board is an online tool that allows you to input text and
+          customize its animation, direction, font, and any other features.
+        </p>
+        <div className="questionAnswer w-full  flex flex-col ">
+          {questions.map((question, index) => (
+            <div key={index}>
+              <div
+                className="question flex justify-between flex-row items-center rounded-md m-1 bg-blue-200 cursor-pointer p-3"
+                onClick={() => toggleAnswer(index)}
               >
-                <path
-                  fill="#74C0FC"
-                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                />
-              </svg>
-            </div>
-            {expandedIndex === index && (
-              <div className="answer mt-[10px]">
-                <p>{answers[index]}</p>
+                <span>{`${index + 1}. ${question}`}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  className={`w-6 h-6 ${
+                    expandedIndex === index && "rotate-180"
+                  }`}
+                >
+                  <path
+                    fill="#74C0FC"
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
               </div>
-            )}
-          </div>
-        ))}
+              {expandedIndex === index && (
+                <div className="answer mt-3">
+                  <p>{answers[index]}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -2,13 +2,19 @@ import React, { useEffect, useRef } from "react";
 
 function FireworkCanvas() {
   const canvasRef = useRef(null);
+  const parentRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const parent = parentRef.current;
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+    };
+
+    resizeCanvas();
 
     const particles = [];
     const colors = ["#2185C5", "#7ECEFD", "#FFF6E5", "#FF7F66"];
@@ -80,8 +86,7 @@ function FireworkCanvas() {
     animate();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      resizeCanvas();
     };
 
     window.addEventListener("resize", handleResize);
@@ -99,7 +104,14 @@ function FireworkCanvas() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <div
+      ref={parentRef}
+      style={{ width: "100%", height: "100%", position: "relative" }}
+    >
+      <canvas ref={canvasRef} style={{ display: "block" }} />
+    </div>
+  );
 }
 
 export default FireworkCanvas;

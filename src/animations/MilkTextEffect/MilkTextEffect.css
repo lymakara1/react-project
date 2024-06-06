@@ -1,0 +1,24 @@
+.milk-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.milk-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  animation: milk 3s infinite;
+}
+
+@keyframes milk {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

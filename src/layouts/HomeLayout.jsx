@@ -10,7 +10,7 @@ function HomeLayout() {
   const [blink, setBlink] = useState(false);
   const [blinkFrequency, setBlinkFrequency] = useState(500); // in ms
   const [fontFamily, setFontFamily] = useState("sans-serif");
-  const [fontSize, setFontSize] = useState(16);
+  const [fontSize, setFontSize] = useState(50);
   const [fontColor, setFontColor] = useState("#000000");
   const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
 

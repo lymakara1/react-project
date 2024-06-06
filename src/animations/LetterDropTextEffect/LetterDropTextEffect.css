@@ -1,0 +1,21 @@
+.letter-drop-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.letter-drop {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  animation: drop 3s infinite;
+}
+
+@keyframes drop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}

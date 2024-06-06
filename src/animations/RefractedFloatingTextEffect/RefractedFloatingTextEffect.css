@@ -1,0 +1,24 @@
+.refracted-floating-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.refracted-floating-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  position: relative;
+  color: #fff;
+  animation: refract 4s ease-in-out infinite;
+}
+
+@keyframes refract {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+  }
+}

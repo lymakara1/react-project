@@ -147,8 +147,9 @@ function Customization({
             <input
               className="w-[153px] Speed"
               type="range"
-              min="50"
-              max="2000"
+              min="1"
+              max="20"
+              step="1"
               value={blinkFrequency}
               onChange={(e) => setBlinkFrequency(parseInt(e.target.value))}
             />
