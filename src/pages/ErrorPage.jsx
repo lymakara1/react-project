@@ -7,7 +7,7 @@ function ErrorPage() {
     <div className="m-auto w-80 p-5 flex flex-col items-center gap-3">
       <img src={errorImg} alt="Error Image" />
       <h2 className="text-4xl text-red-500">Page Error</h2>
-      <Link className="hover:text-blue-700" to="/home">
+      <Link className="hover:text-blue-700" to="/">
         Back Home
       </Link>
     </div>

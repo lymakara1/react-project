@@ -44,9 +44,9 @@ function GroupPoster() {
   return (
     <React.Fragment>
       <div
-        className="flex justify-center items-center m-3 p-3 rounded-md"
+        className="flex justify-center items-center m-3 p-3 rounded-md bg-gradient-to-r from-[#D21CFF] to-[#ff711e] to-90%"
         style={{
-          backgroundImage: `url(${deepmind})`,
+          // backgroundImage: `url(${deepmind})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

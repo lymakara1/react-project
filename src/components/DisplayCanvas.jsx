@@ -2,72 +2,75 @@ import React, { useContext, useEffect, useRef } from "react";
 import Canvas from "./canvas/Canvas";
 import { ShareText } from "./ShareText";
 
-// Draw Backgrund
-const drawBackground = (ctx, width, height) => {
-  ctx.fillStyle = "black";
+// Draw Background
+const drawBackground = (ctx, width, height, backgroundColor) => {
+  ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, width, height);
 };
 
-//Draw Backgorund Animation
-const drawCircle = function (ctx) {
-  const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  ctx.beginPath();
-
-  ctx.beginPath();
-  ctx.arc(100, 100, 30, 0, Math.PI * 2, false);
-  ctx.strokeStyle = "red";
-  ctx.stroke();
-  ctx.fillStyle = randomColor;
-  ctx.fill();
-};
-
-const drawText = (ctx, frameCount, text, width, height) => {
-  var textMetrics = ctx.measureText(text);
-  var textWidth = ctx.measureText(text).width;
-  var textHeight =
+const drawText = (
+  ctx,
+  frameCount,
+  text,
+  width,
+  height,
+  scrollDirection,
+  scrollSpeed,
+  blink,
+  blinkFrequency,
+  fontFamily,
+  fontSize,
+  fontColor
+) => {
+  ctx.font = `bold ${fontSize}px ${fontFamily}`;
+  const textMetrics = ctx.measureText(text);
+  const textWidth = textMetrics.width;
+  const textHeight =
     textMetrics.actualBoundingBoxAscent + textMetrics.actualBoundingBoxDescent;
-  var x = (width - textWidth) / 2;
-  var y = (height - textHeight) / 2 + textMetrics.actualBoundingBoxAscent;
+  let x = (width - textWidth) / 2;
+  const y = (height - textHeight) / 2 + textMetrics.actualBoundingBoxAscent;
 
-  ctx.fillStyle = "red";
-  ctx.font = "bold 100px sans-serif";
+  ctx.fillStyle = fontColor;
 
-  let speed = 2;
-  let direction = 1; // 1 for right, -1 for left
-  let isPaused = true;
-  let blink = true; // Set to true to enable blinking
-  let blinkSpeed = 50; // Blink speed in milliseconds
+  const isPaused = scrollDirection === 0;
+  const direction = scrollDirection;
+  const speed = scrollSpeed;
 
-  if (isPaused) {
-    // Center the text when paused
-    x = (width - textWidth) / 2;
-  } else {
-    let dx = (frameCount * speed) % (width + textWidth);
+  if (!isPaused) {
+    const dx = (frameCount * speed) % (width + textWidth);
     x = direction === 1 ? dx - textWidth : width - dx;
 
-    // Adjust the position to loop correctly
-    if (direction === 1 && x > width) {
-      frameCount = 0;
-    } else if (direction === -1 && x + textWidth < 0) {
+    if (
+      (direction === 1 && x > width) ||
+      (direction === -1 && x + textWidth < 0)
+    ) {
       frameCount = 0;
     }
   }
 
   const currentTime = Date.now();
-  const elapsedTime = currentTime - frameCount;
-  const blinkState = blink && elapsedTime % (2 * blinkSpeed) < blinkSpeed;
+  const blinkState =
+    !blink || currentTime % (2 * blinkFrequency) < blinkFrequency;
 
   if (blinkState) {
     ctx.fillText(text, x, y);
   }
 };
 
-function DisplayCanvas() {
+function DisplayCanvas({
+  scrollDirection,
+  scrollSpeed,
+  blink,
+  blinkFrequency,
+  fontFamily,
+  fontSize,
+  fontColor,
+  backgroundColor,
+}) {
   const { text, fullscreen, setFullScreen } = useContext(ShareText);
   const canvasContainerRef = useRef(null);
 
   useEffect(() => {
-    // Function to check if value is true
     const checkValue = () => {
       if (fullscreen) {
         setFullScreen(false);
@@ -88,9 +91,21 @@ function DisplayCanvas() {
   const draw = (ctx, frameCount) => {
     const { width, height } = ctx.canvas;
     ctx.clearRect(0, 0, width, height);
-    drawBackground(ctx, width, height);
-    drawText(ctx, frameCount, text, width, height);
-    // drawCircle(ctx);
+    drawBackground(ctx, width, height, backgroundColor);
+    drawText(
+      ctx,
+      frameCount,
+      text,
+      width,
+      height,
+      scrollDirection,
+      scrollSpeed,
+      blink,
+      blinkFrequency,
+      fontFamily,
+      fontSize,
+      fontColor
+    );
   };
 
   return (

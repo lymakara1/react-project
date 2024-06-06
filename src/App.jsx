@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home, AboutUs, ErrorPage, Documents } from "./pages/index";
 import RootLayout from "./layouts/RootLayout";
 import { ShareText } from "./components/ShareText";
+import SpecialAnimation from "./components/SpecialAnimation";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/AboutUs",
         element: <AboutUs />,
+      },
+      {
+        path: "/Special",
+        element: <SpecialAnimation />,
       },
     ],
   },
