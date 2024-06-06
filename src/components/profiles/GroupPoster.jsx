@@ -51,7 +51,7 @@ function GroupPoster() {
           backgroundPosition: "center",
         }}
       >
-        <div className=" m-3 rounded-md p-3 grid grid-cols-1 md:grid-cols-3 gap-5 place-content-center">
+        <div className="rounded-md grid gap-5 place-content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {members.map((member, index) => {
             const { profile, name, descriptions } = member;
             return (
