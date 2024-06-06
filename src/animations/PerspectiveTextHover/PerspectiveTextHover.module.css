@@ -1,0 +1,14 @@
+.wrapper {
+  text-align: center;
+  margin: 50px;
+  perspective: 1000px;
+}
+
+.text {
+  font-size: 5rem;
+  transition: transform 0.3s;
+}
+
+.text:hover {
+  transform: rotateY(20deg);
+}

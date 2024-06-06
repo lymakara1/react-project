@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import FireworkCanvas from "../animations/FireworkCanvas";
+import JessicaJonesLogo from "../animations/JessicaJonesLogo/JessicaJonesLogo";
+import NeonText from "../animations/NeonText/NeonText";
+import PerspectiveTextHover from "../animations/PerspectiveTextHover/PerspectiveTextHover";
 
 function Documents() {
   return (
@@ -11,7 +14,9 @@ function Documents() {
         <div>hello</div>
         <div>hello</div>
         <div>hello</div>
-        <FireworkCanvas />
+        <JessicaJonesLogo />
+        <NeonText />
+        <PerspectiveTextHover />
       </div>
     </div>
   );

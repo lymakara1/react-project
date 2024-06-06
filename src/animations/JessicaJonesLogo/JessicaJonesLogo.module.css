@@ -1,0 +1,13 @@
+.wrapper {
+  text-align: center;
+  margin: 50px;
+}
+
+.logo {
+  font-size: 5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000,
+    0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000,
+    0 0 150px #ff0000;
+}
