@@ -1,0 +1,24 @@
+.frozen-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.frozen-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #00f;
+  text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  animation: frozen-animation 3s infinite;
+}
+
+@keyframes frozen-animation {
+  0% {
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+  50% {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f;
+  }
+  100% {
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+}

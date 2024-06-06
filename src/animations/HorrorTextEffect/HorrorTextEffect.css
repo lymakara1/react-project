@@ -1,0 +1,12 @@
+.horror-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.horror-text {
+  font-family: "Creepster", cursive;
+  font-size: 48px;
+  color: #ff0000;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #000, 6px 6px 0 #000, 8px 8px 0 #000,
+    10px 10px 0 #000;
+}

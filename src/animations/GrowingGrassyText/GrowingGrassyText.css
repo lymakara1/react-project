@@ -1,0 +1,34 @@
+.growing-grassy-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.growing-grassy-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #8b4513;
+  position: relative;
+}
+
+.growing-grassy-text::before {
+  content: "Growing Grassy Text";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #228b22;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  animation: growing-grass 10s steps(20) infinite;
+}
+
+@keyframes growing-grass {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

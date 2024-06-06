@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./JessicaJonesLogo.module.css";
+import { ShareText } from "../../components/ShareText";
 
 const JessicaJonesLogo = () => {
+  const { text } = useContext(ShareText);
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.logo}>Jessica Jones</h1>
+      <h1 className={styles.logo}>{text}</h1>
     </div>
   );
 };

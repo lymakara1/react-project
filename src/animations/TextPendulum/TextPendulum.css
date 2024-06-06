@@ -1,0 +1,24 @@
+.pendulum-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pendulum-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  display: inline-block;
+  transform-origin: top center;
+  animation: pendulum 2s infinite ease-in-out;
+}
+
+@keyframes pendulum {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}

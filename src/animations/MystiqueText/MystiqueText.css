@@ -1,0 +1,27 @@
+.mystique-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mystique-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  background: linear-gradient(90deg, #fff, #000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: mystique-animation 2s infinite;
+}
+
+@keyframes mystique-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

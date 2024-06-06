@@ -1,0 +1,16 @@
+.fluid-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.fluid-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #000;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.fluid-text:hover {
+  color: #ff0080;
+  transform: scale(1.2);
+}

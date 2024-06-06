@@ -1,0 +1,24 @@
+.wave-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.wave-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  position: relative;
+  display: inline-block;
+  animation: wave-animation 1.5s infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

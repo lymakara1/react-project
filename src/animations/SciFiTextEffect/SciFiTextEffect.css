@@ -1,0 +1,12 @@
+.sci-fi-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sci-fi-text {
+  font-family: "Orbitron", sans-serif;
+  font-size: 48px;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00,
+    0 0 40px #00ff00;
+}

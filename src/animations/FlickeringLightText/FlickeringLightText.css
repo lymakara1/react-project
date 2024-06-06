@@ -1,0 +1,31 @@
+.flicker-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.flicker-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff,
+    0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  animation: flicker-anim 1.5s infinite alternate;
+}
+
+@keyframes flicker-anim {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff,
+      0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #ff00ff, 0 0 10px #ff00ff,
+      0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff,
+      0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+}

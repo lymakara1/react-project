@@ -1,0 +1,28 @@
+/* Add the CSS for the Repellers effect here */
+.wrapper {
+  text-align: center;
+  margin: 50px;
+}
+
+.text {
+  font-size: 5rem;
+  color: #ff0;
+  text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #ff0,
+    0 0 80px #ff0, 0 0 90px #ff0, 0 0 100px #ff0, 0 0 150px #ff0;
+  animation: repeller 1s infinite;
+}
+
+@keyframes repeller {
+  0% {
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #ff0,
+      0 0 80px #ff0, 0 0 90px #ff0, 0 0 100px #ff0, 0 0 150px #ff0;
+  }
+  50% {
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #fff,
+      0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #ff0,
+      0 0 80px #ff0, 0 0 90px #ff0, 0 0 100px #ff0, 0 0 150px #ff0;
+  }
+}

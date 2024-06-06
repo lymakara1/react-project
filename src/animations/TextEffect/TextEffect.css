@@ -1,0 +1,27 @@
+.text-effect-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-effect {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 3s infinite linear;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
