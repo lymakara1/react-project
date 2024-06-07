@@ -34,34 +34,24 @@ function FontSetting({
                 className="fontOption"
                 value={fontFamily}
                 onChange={(e) => setFontFamily(e.target.value)}
+                style={{ fontFamily }}
               >
-                <option value="sans-serif">Sans-Serif</option>
-                <option value="serif">Serif</option>
-                <option value="monospace">Monospace</option>
-                <option value="Arial">Arial</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
-                {/* Add more font options as needed */}
-
-                <option value="sans-serif">Sans-Serif</option>
-                <option value="serif">Serif</option>
-                <option value="monospace">Monospace</option>
-                <option value="Arial">Arial</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
-                {/* Khmer Fonts */}
-                <option value="Khmer UI">Khmer UI</option>
-                <option value="Khmer Sangam MN">Khmer Sangam MN</option>
-                <option value="Hanuman">Hanuman</option>
-                <option value="Battambang">Battambang</option>
-                <option value="Nokora">Nokora</option>
-                <option value="Moul">Moul</option>
-                <option value="Metal">Metal</option>
-                <option value="Content">Content</option>
+                <optgroup label="English Fonts">
+                  <option value="sans-serif">Sans-Serif</option>
+                  <option value="serif">Serif</option>
+                  <option value="monospace">Monospace</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Courier New">Courier New</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Times New Roman">Times New Roman</option>
+                  <option value="Verdana">Verdana</option>
+                </optgroup>
+                <optgroup label="Khmer Fonts">
+                  <option value="Hanuman">Hanuman</option>
+                  <option value="Battambang">Battambang</option>
+                  <option value="Nokora">Nokora</option>
+                  <option value="Moul">Moul</option>
+                </optgroup>
               </select>
             </div>
           </div>

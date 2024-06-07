@@ -20,7 +20,7 @@ function InputField() {
             placeholder={text}
           />
           <button
-            className="bg-[#71A8FB] rounded-md hover:text-white p-3 flex justify-center items-center"
+            className="text-white bg-blue-700 hover:bg-blue-800 rounded-md  p-3 flex justify-center items-center"
             onClick={() => setText("")}
           >
             Clear

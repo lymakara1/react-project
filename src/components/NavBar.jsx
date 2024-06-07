@@ -22,7 +22,7 @@ function NavBar() {
           <img
             className="h-12 rounded-sm hover:scale-125 transition duration-150 ease-out hover:ease-in"
             src={gicLogo}
-            alt=""
+            alt="GIC logo"
           />
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
@@ -79,7 +79,7 @@ function NavBar() {
           } w-full md:block md:w-auto`}
           id="navbar-sticky"
         >
-          <div className=" flex max-md:flex-col  max-md:w-auto p-4 max-md:p-0 mt-4 font-medium border  rounded-lg   md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  w-[800px] justify-evenly ">
+          <div className=" flex max-md:flex-col  max-md:w-auto p-4 max-md:p-0 mt-4 font-medium border  rounded-lg   md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  w-[500px] justify-evenly ">
             <NavLink
               className="block py-2 px-3 text-[#2b5e64] focus:text-[#63cbff] hover:scale-125 transition duration-150 ease-out hover:ease-in rounded max-md:focus:bg-blue-400 max-md:focus:text-white md:p-0 max-md:hover:scale-100 no-underline"
               to="/"

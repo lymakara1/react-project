@@ -5,6 +5,12 @@ import RootLayout from "./layouts/RootLayout";
 import { ShareText } from "./components/ShareText";
 import SpecialAnimation from "./components/SpecialAnimation";
 
+// Importing fonts
+import "@fontsource/hanuman"; // Defaults to weight 400
+import "@fontsource/battambang"; // Defaults to weight 400
+import "@fontsource/nokora"; // Defaults to weight 400
+import "@fontsource/moul"; // Defaults to weight 400
+
 const router = createBrowserRouter([
   {
     path: "/",

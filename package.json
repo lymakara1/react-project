@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/battambang": "^5.0.13",
+    "@fontsource/hanuman": "^5.0.13",
+    "@fontsource/moul": "^5.0.20",
+    "@fontsource/nokora": "^5.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
