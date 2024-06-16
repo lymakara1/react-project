@@ -5,7 +5,8 @@ function InputField() {
   const { text, setText } = useContext(ShareText);
 
   function handleChange(e) {
-    setText(e.target.value);
+    const Input = document.querySelector(".Input1").value
+    Input == "" ?  setText("Welcome to GIC2B") : setText(e.target.value)
     console.log(e.target.value);
   }
   return (
@@ -13,9 +14,8 @@ function InputField() {
       <div className="flex flex-col">
         <div className="flex flex-row gap-2">
           <input
-            className="grow p-3 rounded-md border-none"
+            className="Input1 grow p-3 rounded-md border-none"
             onChange={handleChange}
-            value={text}
             type="text"
             placeholder={text}
           />

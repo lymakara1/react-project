@@ -42,9 +42,14 @@ import PulseTextAnimation from "../animations/PulseTextAnimation/PulseTextAnimat
 import JumpingTextAnimation from "../animations/JumpingTextAnimation/JumpingTextAnimation";
 
 function SpecialAnimation() {
+
   return (
     <div className="flex flex-col gap-5 m-3 ">
-      <FireworkCanvas />
+      <div className=" text-4xl font-bold m-5 ">SPECIAL ANIMATION < hr/></div>
+      <div>
+        <div>Test animation here</div>
+        <input type="text" />
+      </div>
       <CuttingTextEffect />
       <FrozenText />
       <GlitchText />

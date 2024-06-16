@@ -13,19 +13,19 @@ function GroupPoster() {
       profile: makaraImg,
       name: "Ly Makara",
       descriptions:
-        "I am a student in ITC. I am currently a year three student majoring in Computer Science.",
+        "I am punctual with excellent attendance record. Moreover, I  am a quick to learn and willing to adapt to any job.",
     },
     {
       profile: orngImg,
       name: "Kheang Ouyorng",
       descriptions:
-        "I am a student in ITC. I am currently a year three student majoring in Computer Science.",
+        "A third year student majoring in Information Technology and a   very curious and passionate to learn new things.",
     },
     {
       profile: kimtryImg,
       name: "Leng Kimtry",
       descriptions:
-        "I am a student in ITC. I am currently a year three student majoring in Computer Science.",
+        "I am open-minded and committed. Additionally, I am ready to face the challenges and boost my future career.",
     },
     {
       profile: sombathImg,

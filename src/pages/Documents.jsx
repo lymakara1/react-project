@@ -21,6 +21,7 @@ import HorrorTextEffect from "../animations/HorrorTextEffect/HorrorTextEffect";
 import SciFiTextEffect from "../animations/SciFiTextEffect/SciFiTextEffect";
 import CuttingTextEffect from "../animations/CuttingTextEffect/CuttingTextEffect";
 import "./Dstyle.css";
+import SpecialAnimation from '../components/SpecialAnimation'
 
 function Documents() {
   const [questions] = useState([
@@ -58,10 +59,10 @@ function Documents() {
   return (
     <div className="bg-slate-100 m-3 p-3 rounded-md">
       <div className="text-slate-800 flex flex-col justify-center items-center w-full ">
-        <p class="text-3xl font-semibold text-gray-500">What is Text Board?</p>
-        <p className="text-black">
-          Text Board is an online tool that allows you to input text and
-          customize its animation, direction, font, and any other features.
+        <div className="text-3xl font-bold m-5">What is GIC2B Textboard?</div>
+        <p className="text-black mt-5 w-[90%] text-md">
+        <b>GIC2B Textboard</b>  represents a pioneering online tool developed by the 2024 I3 GIC2B at
+        Institute of Technology of Cambodia. It empowers users to input text and personalize its animation, direction, font selection, and other customizable features as shown below.
         </p>
         <div className="questionAnswer w-full  flex flex-col ">
           {questions.map((question, index) => (
@@ -93,6 +94,7 @@ function Documents() {
           ))}
         </div>
       </div>
+      <SpecialAnimation/>
     </div>
   );
 }

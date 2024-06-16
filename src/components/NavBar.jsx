@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import gicLogo from "../assets/gicLogo.png";
 import { NavLink } from "react-router-dom";
 import { ShareText } from "./ShareText";
+import Premium from './Premium.svg'
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,7 +80,7 @@ function NavBar() {
           } w-full md:block md:w-auto`}
           id="navbar-sticky"
         >
-          <div className=" flex max-md:flex-col  max-md:w-auto p-4 max-md:p-0 mt-4 font-medium border  rounded-lg   md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  w-[500px] justify-evenly ">
+          <div className=" items-center flex max-md:flex-col  max-md:w-auto p-4 max-md:p-0 mt-4 font-medium border  rounded-lg   md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  justify-evenly ">
             <NavLink
               className="block py-2 px-3 text-[#2b5e64] focus:text-[#63cbff] hover:scale-125 transition duration-150 ease-out hover:ease-in rounded max-md:focus:bg-blue-400 max-md:focus:text-white md:p-0 max-md:hover:scale-100 no-underline"
               to="/"
@@ -102,10 +103,10 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              className="block py-2 px-3 text-[#2b5e64] focus:text-[#63cbff] hover:scale-125 transition duration-150 ease-out hover:ease-in rounded max-md:focus:bg-blue-400 max-md:focus:text-white md:p-0 max-md:hover:scale-100 no-underline"
-              to="/Special"
+              className=" bg-yellow-200 block py-2 px-3 text-[#2b5e64] focus:text-[#63cbff] hover:scale-125 transition duration-150 ease-out hover:ease-in rounded max-md:focus:bg-blue-400 max-md:focus:text-white md:p-0 max-md:hover:scale-100 no-underline"
+              to="/SpecialORNG"
             >
-              SPECIAL
+              <img src={Premium}  class='w-28 flex items-center' alt="" />
             </NavLink>
           </div>
         </div>
