@@ -74,8 +74,6 @@ import SkewTextAnimation from "../animations/SkewTextAnimation/SkewTextAnimation
 import PulseTextAnimation from "../animations/PulseTextAnimation/PulseTextAnimation";
 import JumpingTextAnimation from "../animations/JumpingTextAnimation/JumpingTextAnimation";
 
-
-
 function DisplayText() {
   const {fullscreen,setFullScreen}= useContext(Shared)
   const {ModeClicked,setModeClicked} = useContext(Shared)

@@ -6,6 +6,7 @@ import orngImg from "../../assets/orng.jpg";
 import kimtryImg from "../../assets/kimtry.jpg";
 import sombathImg from "../../assets/sombath.jpg";
 import vichetImg from "../../assets/vichet.jpg";
+import Sophea from "../../assets/sophea.png"
 
 function GroupPoster() {
   const members = [
@@ -38,6 +39,12 @@ function GroupPoster() {
       name: "Long Sovichet",
       descriptions:
         "I am a student in ITC. I am currently a year three student majoring in Computer Science.",
+    },
+    {
+      profile: Sophea,
+      name: "LEANG Sereysophea",
+      descriptions:
+        "I am currently a year three student majoring in Electrical Engineer.",
     },
   ];
 

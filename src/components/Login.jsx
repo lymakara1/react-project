@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Login() {
   return (
@@ -11,9 +12,9 @@ function Login() {
             </div>
             <div className='flex justify-end'>
                 <button type="button">
-                      <a href='/ORNGSpecial' className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
-                        Start Free Trial Now
-                      </a>
+                      <NavLink to="/ORNGSpecial" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                          Start Free Trial Now
+                      </NavLink>
                 </button>
             </div>
         </div>
